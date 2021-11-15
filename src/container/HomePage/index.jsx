@@ -7,7 +7,7 @@ function HomePage() {
 	return (
 		<Container>
 			<Header>
-				WARSHIP
+				warship
 			</Header>
 
 			<main>
@@ -26,11 +26,11 @@ function HomePage() {
 					</Ordem>
 				</Orderns>
 
-				<h1>Escolha um lado</h1>
+				<h1>ESCOLHA UM LADO</h1>
 
 				<Regras>
 					<Image src="/images/regras.png" alt="Regra" width={25} height={25} />
-					<span>Regras</span>
+					<span>regras</span>
 				</Regras>
 			</main>
 		</Container>

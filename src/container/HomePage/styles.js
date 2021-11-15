@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query'
+
 import { Colors, Efects, Fonts, Gradients } from '../../../styles'
 
 export const Container = styled.div`
@@ -26,6 +28,13 @@ export const Header = styled.header`
 	${Fonts.StarJedi.reg16};
 	color: ${Colors.yellow};
 	text-align: center;
+
+	${media.greaterThan('medium')`
+		${Fonts.StarJedi.reg54}
+		text-align: left;
+		margin: 0 auto;
+		max-width: 1024px;
+	`}
 `
 
 export const Orderns = styled.div`
@@ -59,6 +68,20 @@ export const Ordem = styled.div`
 		color: ${Colors.white};
 		margin-top: 10px;
 	}
+
+	${media.greaterThan('medium')`
+		width: 240px;
+		height: 280px;
+
+		h2 {
+			${Fonts.Oswald.bold54}
+		}
+
+		span {
+			width: 140px !important;
+			height: 140px !important;
+		}
+	`}
 `
 
 export const Regras = styled.div`
@@ -73,4 +96,9 @@ export const Regras = styled.div`
 		${Fonts.Oswald.reg24}
 		color: ${Colors.yellow};
 	}
+	
+	${media.greaterThan("medium")`
+		position: absolute;
+		top: -80px
+	`}
 `
