@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query'
 
-import { Colors, Efects, Fonts, Gradients } from '../../../styles'
+import { Colors, Effects, Fonts, Gradients } from '../../../styles'
 
 export const Container = styled.div`
-	${Efects.blackImage}
+	${Effects.blackImage}
 	height: 100vh;
 	background-size: contain;
 
@@ -55,11 +55,11 @@ export const Ordem = styled.div`
 	${({ color }) => color === 'red' ?
 		css`
 			${Gradients.redDark}
-			${Efects.red}
+			${Effects.red}
 		`
 		: css`
 			${Gradients.blueDark}}
-			${Efects.blue}
+			${Effects.blue}
 		`}
 
 

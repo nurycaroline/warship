@@ -12,7 +12,7 @@ const Colors = {
 	yellow: '#FFDF00',
 }
 
-const Efects = {
+const Effects = {
 	blue: css`box-shadow: 0px 0px 22px 9px rgba(59, 85, 159, 0.74);`,
 	blueSmall: css`box-shadow: 0px 0px 11px 4.5px rgba(59, 85, 159, 0.74);`,
 
@@ -111,7 +111,7 @@ const Fonts = {
 
 export {
 	Colors,
-	Efects,
+	Effects,
 	Gradients,
 	Fonts
 }
