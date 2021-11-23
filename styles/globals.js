@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import { Fonts } from './'
 const StarJediFont = './fonts/star-jedi.ttf';
 
 const GlobalStyle = createGlobalStyle`
@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 	* {
+		${Fonts.Oswald.reg24}
 		font-size: 16px;
 		box-sizing: border-box;
 		margin: 0;

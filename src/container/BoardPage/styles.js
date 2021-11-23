@@ -1,7 +1,12 @@
 import styled from 'styled-components';
-import { Colors } from '../../../styles'
+import { Colors, Effects } from '../../../styles'
 
 export const Container = styled.div`
+	${Effects.blackImage}
+	height: 100vh;
+	background-size: contain;
+	display: flex;
+	align-items: center;
 	
 
 	h1 {
@@ -9,16 +14,3 @@ export const Container = styled.div`
 	}
 `;
 
-export const Points = styled.div`
-	p:nth-child(1){
-		background-color: ${({ theme }) => theme.play.primary};
-	}
-
-	p:nth-child(2){
-		color: ${Colors.yellow};
-	}
-	
-	p:nth-child(3){
-		background-color: ${({ theme }) => theme.comp.primary};
-	}
-`

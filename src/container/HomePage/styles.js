@@ -93,7 +93,6 @@ export const Regras = styled.div`
 	margin-top: 100px;
 
 	span {
-		${Fonts.Oswald.reg24}
 		color: ${Colors.yellow};
 	}
 	
