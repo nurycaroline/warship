@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Colors, Effects } from '../../../styles'
+import { Colors, Effects, Fonts } from '../../../styles'
 
 export const Container = styled.div`
 	${Effects.blackImage}
@@ -36,8 +36,8 @@ export const Opcoes = styled.div`
 			width: 100px;
 
 			&:hover {
-				color: ${({theme}) => theme.play.primary};
-				border: 1px solid ${({theme}) => theme.play.primary};
+				color: ${({ theme }) => theme.play.primary};
+				border: 1px solid ${({ theme }) => theme.play.primary};
 			}
 		}
 	}
@@ -54,7 +54,52 @@ export const Button = styled.button`
 	font-size: 28px;
 
 	&:hover {
-		color: ${({theme}) => theme.play.primary};
-		border: 1px solid ${({theme}) => theme.play.primary};
+		color: ${({ theme }) => theme.play.primary};
+		border: 1px solid ${({ theme }) => theme.play.primary};
+	}
+`
+
+export const Card = styled.div`
+	width: 100%;
+	margin-bottom: 60px;
+	border: 1px solid ${({ theme }) => theme.play.primary};
+	${({ theme }) => theme.play.primaryEffectsSmall};
+	display: flex;
+	justify-content: space-between;
+`
+
+export const CardGroupImage = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	span:nth-child(1){
+		opacity: 0.2 !important;
+	}
+
+	span:nth-child(2){
+		position: absolute !important;
+	}
+`
+
+export const CardInfos = styled.div`
+	width: 70%;
+	padding-right: 10px;
+
+	h2 {
+		color: ${Colors.white};
+		${Fonts.StarJedi.reg16}
+	}
+
+	p {
+		color: ${Colors.white};
+		display: flex;
+		width: 100%;
+    justify-content: space-between;
+
+		strong {
+			text-align: right;
+			width: 100%;
+		}
 	}
 `
