@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Colors } from '../../../styles';
 
-
 export const Opcoes = styled.div`
 	h1 {
 		color: ${Colors.yellow};
