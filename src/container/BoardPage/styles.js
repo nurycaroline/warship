@@ -9,97 +9,28 @@ export const Container = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 0 36px;
-
-	h1 {
-		color: ${({ theme }) => theme.play.primary};
-	}
+	justify-content: space-between;
 `;
 
+export const Result = styled.div`
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: ${Colors.black};
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
 
-export const Opcoes = styled.div`
+	width: 300px;
+	height: 200px;
+
 	h1 {
 		color: ${Colors.yellow};
-	}
-
-	ul {
-		color: ${Colors.white};
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 10px;
-		
-		li {
-			border: 1px solid ${Colors.white};
-			border-radius: 4px;
-			text-align: center;
-			padding: 0 10px;
-			width: 100px;
-
-			&:hover {
-				color: ${({ theme }) => theme.play.primary};
-				border: 1px solid ${({ theme }) => theme.play.primary};
-			}
-		}
-	}
-
-`
-
-export const Button = styled.button`
-	height: 40px;
-	color: ${Colors.yellow};
-	border: 1px solid ${Colors.yellow};
-	border-radius: 4px;
-	margin: 20px auto;
-	padding: 0 20px;
-	font-size: 28px;
-
-	&:hover {
-		color: ${({ theme }) => theme.play.primary};
-		border: 1px solid ${({ theme }) => theme.play.primary};
-	}
-`
-
-export const Card = styled.div`
-	width: 100%;
-	margin-bottom: 60px;
-	border: 1px solid ${({ theme }) => theme.play.primary};
-	${({ theme }) => theme.play.primaryEffectsSmall};
-	display: flex;
-	justify-content: space-between;
-`
-
-export const CardGroupImage = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	span:nth-child(1){
-		opacity: 0.2 !important;
-	}
-
-	span:nth-child(2){
-		position: absolute !important;
-	}
-`
-
-export const CardInfos = styled.div`
-	width: 70%;
-	padding-right: 10px;
-
-	h2 {
-		color: ${Colors.white};
-		${Fonts.StarJedi.reg16}
-	}
-
-	p {
-		color: ${Colors.white};
-		display: flex;
-		width: 100%;
-    justify-content: space-between;
-
-		strong {
-			text-align: right;
-			width: 100%;
-		}
+		${Fonts.Oswald.reg24}
 	}
 `

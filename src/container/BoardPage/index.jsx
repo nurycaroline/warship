@@ -1,16 +1,20 @@
-import React from 'react';
-import Image from 'next/image'
+import React, { useState } from 'react';
 
 import Points from '../../components/Points';
+import Button from '../../components/Button';
+import ListOption from '../../components/ListOption';
 
-import { Container, Opcoes, Button, Card, CardInfos, CardGroupImage } from './styles';
+import { Container, Result } from './styles';
+import Card from '../../components/Card';
 
 
 function BoardPage({ side }) {
 
+	const [showResult, setShowResult] = useState(true)
+
 	return (
 		<Container>
-			<Opcoes>
+			<ListOption>
 				<h1>Escolha uma característica:</h1>
 				<ul>
 					<li>Preço</li>
@@ -19,28 +23,20 @@ function BoardPage({ side }) {
 					<li>Comprimento</li>
 					<li>Altura</li>
 				</ul>
-			</Opcoes>
+			</ListOption>
+
 			<Button>COMBATER</Button>
 
-			<Card>
-				<CardGroupImage>
-					<Image src="/images/ship.png" alt="Sith"
-						width={100} height={100} />
+			<Card />
 
-					<Image src="/images/ship.png" alt="Sith"
-						width={65} height={65} />
-				</CardGroupImage>
+			{showResult && (
+				<Result>
+					<h1>VOCÊ PERDEU!!</h1>
+					<Button>PRÓXIMA RODADA</Button>
+				</Result>
+			)}
 
-				<CardInfos>
-					<h2>The Advanced v1</h2>
-					<p>Preço <strong>150,000</strong></p>
-					<p>Comprimento <strong>150,000</strong></p>
-					<p>Largura <strong>150,000</strong></p>
-					<p>Altura <strong>150,000</strong></p>
-					<p>Velocidade <strong>150,000</strong></p>
-				</CardInfos>
-			</Card>
-
+			<Card type="comp" />
 
 			<Points />
 		</Container>
