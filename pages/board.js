@@ -4,13 +4,14 @@ import Head from 'next/head'
 import BoardPage from '../src/container/BoardPage';
 import { ThemeProvider } from 'styled-components'
 import Themes from '../styles/themes'
+import { handler } from "./api/cards";
 
-function Board() {
+function Board({ cards }) {
   const router = useRouter()
   const { side } = router.query
-
+  
   const theme = {
-    play: Themes[side],
+    play: Themes[side || 'jedi'],
     comp: Themes[side === 'jedi' ? 'sith' : 'jedi']
   }
 
@@ -23,10 +24,24 @@ function Board() {
       </Head>
 
       <ThemeProvider theme={theme}>
-        <BoardPage side={side} />
+        <BoardPage side={side} cards={cards} />
       </ThemeProvider>
     </div>
   );
 }
 
 export default Board;
+
+export const getStaticProps = async () => {
+  const database = await handler();
+
+  return {
+    props: {
+      cards: database,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every second
+    // revalidate: 1, // In seconds
+  };
+};

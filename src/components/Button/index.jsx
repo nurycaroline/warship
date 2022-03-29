@@ -2,8 +2,8 @@ import React from 'react';
 
 import * as S from './styles';
 
-function Button({ children }) {
-	return <S.Button>{children}</S.Button>;
+function Button({ children, ...props }) {
+	return <S.Button {...props}>{children}</S.Button>;
 }
 
 export default Button;

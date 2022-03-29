@@ -3,33 +3,48 @@ import React from 'react';
 import * as S from './styles';
 import Image from 'next/image'
 
-function Card({ type }) {
-	return type === 'comp' ? (
-		<S.ContainerComp>
-			<Image
-				src="/images/jedi.png"
-				alt="jedi"
-				width={100} height={100} />
-		</S.ContainerComp>
-	) : (
-		<S.Container>
+function Card({ showInfo, isPlayer, side, card }) {
+	const renderInfo = () => (
+		<>
 			<S.ContainerGroupImage>
-				<Image src="/images/ship.png" alt="Sith"
-					width={100} height={100} />
+				{card.image &&
+					<Image src={card.image} alt={card.name}
+						width={100} height={100} />
+				}
 
-				<Image src="/images/ship.png" alt="Sith"
-					width={65} height={65} />
+				{card.image &&
+					<Image src={card.image} alt={card.name}
+						width={65} height={65} />
+				}
 			</S.ContainerGroupImage>
 
 			<S.ContainerInfos>
-				<h2>The Advanced v1</h2>
-				<p>Preço <strong>150,000</strong></p>
-				<p>Comprimento <strong>150,000</strong></p>
-				<p>Largura <strong>150,000</strong></p>
-				<p>Altura <strong>150,000</strong></p>
-				<p>Velocidade <strong>150,000</strong></p>
+				<h2>{card.name}</h2>
+				<p>Preço <strong>{card.cost}</strong></p>
+				<p>Comprimento <strong>{card.length}</strong></p>
+				<p>Largura <strong>{card.width}</strong></p>
+				<p>Altura <strong>{card.height}</strong></p>
+				<p>Velocidade <strong>{card.maxSpeed}</strong></p>
 			</S.ContainerInfos>
-		</S.Container>
+		</>
+	)
+
+	return !isPlayer ? (
+		<S.ContainerComp>
+			{
+				showInfo ? (
+					<Image
+						src={side === 'sith' ? "/images/sith.png" : "/images/jedi.png"}
+						alt={side}
+						width={100} height={100} />
+				)
+					: renderInfo()
+			}
+		</S.ContainerComp>
+	) : (
+		<S.ContainerPlayer>
+			{renderInfo()}
+		</S.ContainerPlayer>
 	)
 }
 

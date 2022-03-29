@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Colors, Fonts} from '../../../styles';
 
-export const Container = styled.div`
+export const ContainerPlayer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
