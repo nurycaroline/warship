@@ -9,44 +9,36 @@ import * as S from './styles';
 import { Ordem } from '../HomePage/styles';
 import Card from '../../components/Card';
 
-function divideCards(cards) {
-	const n = 3
-	const result = [[], []]
-
-	const wordsPerLine = Math.ceil(cards.length / 2)
-
-	for (let line = 0; line < n; line++) {
-		for (let i = 0; i < wordsPerLine; i++) {
-			const value = cards[i + line * wordsPerLine]
-			if (!value) continue
-			result[line].push(value)
-		}
-	}
-
-	return result
-}
-
 function BoardPage({ side, cards }) {
 	const [showResult, setShowResult] = useState('')
 	const [showFinalWineer, setShowFinalWinner] = useState('')
-	const [deck1, deck2] = divideCards(cards)
 
 	const [resultPlay, setResultPlay] = useState({ player: 0, comp: 0 })
 
-	const [cardsPlayer, setCardsPlayer] = useState(deck1)
-	const [cardsComp, setCardsComp] = useState(deck2)
+	const [cardsPlayer, setCardsPlayer] = useState(cards.jedi)
+	const [cardsComp, setCardsComp] = useState(cards.sith)
 
 	const [optionSelected, setOptionSelected] = useState('')
+
+
+	const formatValue = (value) => { 
+		return value
+			.replace('meters', '')
+			.replace('kph', '')
+			.replace('MGLT', '')
+			.replace('credits', '')
+			.replace('km/h', '')
+	}
 
 	const checkResult = (type, optionName) => {
 		setOptionSelected(optionName)
 
 		const playerResult = cardsPlayer[0][type]
-			? parseFloat(cardsPlayer[0][type].replace('meters', ''))
+			? parseFloat(formatValue(cardsPlayer[0][type]))
 			: 0
 
 		const compResult = cardsComp[0][type]
-			? parseFloat(cardsComp[0][type].replace('meters', ''))
+			? parseFloat(formatValue(cardsComp[0][type]))
 			: 0
 
 		setResultPlay({

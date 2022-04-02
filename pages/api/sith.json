@@ -1,0 +1,330 @@
+[
+	{
+		"link": "https://starwars.fandom.com/wiki/TIE_Advanced_x1",
+		"image": "https://static.wikia.nocookie.net/starwars/images/1/1d/Vader_TIEAdvanced_SWB.png/revision/latest?cb=20160915042032",
+		"name": "TIE Advanced x1",
+		"model": "Twin Ion Engine Advanced x1",
+		"length": "11.05 meters",
+		"maxSpeed": "1,200 km/h",
+		"megalight": "105 MGLT",
+		"width": "9.5 meters",
+		"height": "6.28 meters",
+		"passengers": 0,
+		"capacity": 0,
+		"cost": "160,000 credits (new)\n65,000 (used; military requisition charges)",
+		"affiliation": [
+			"Galactic Empire",
+			"Imperial Starfighter Corps",
+			"Sith Order",
+			"Darth Vader's secret forces",
+			"Alliance to Restore the Republic (stolen)",
+			"Tatooine rebel cell (stolen)"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/Pellaeon-class_Star_Destroyer",
+		"image": "https://static.wikia.nocookie.net/starwars/images/1/14/Pellaeon-class_Star_Destroyer_SotG.jpg/revision/latest?cb=20081205002920",
+		"name": "Pellaeon-class Star Destroyer",
+		"model": "Pellaeon-class Star Destroyer",
+		"length": "1,600 meters",
+		"megalight": 0,
+		"width": 0,
+		"height": 0,
+		"passengers": "2,700 troops",
+		"capacity": "11,000 metric tons",
+		"cost": "Not available for sale",
+		"affiliation": [
+			"Fel Empire",
+			"Darth Krayt's Galactic Empire",
+			"Empire-in-exile",
+			"Galactic Alliance Remnant"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/All_Terrain_Armored_Transport/Legends",
+		"image": "https://static.wikia.nocookie.net/starwars/images/c/c9/ATAT-SWFB.jpg/revision/latest?cb=20170825050424",
+		"name": "All Terrain Armored Transport",
+		"model": "All Terrain Armored Transport",
+		"length": "20 meters",
+		"megalight": 0,
+		"width": 0,
+		"height": "22.5 meters",
+		"passengers": "40 troops or more (depending on internal configuration)",
+		"capacity": "1 metric ton",
+		"cost": "150,000",
+		"affiliation": [
+			"Galactic Republic",
+			"Galactic Empire",
+			"Imperial Army",
+			"Alliance to Restore the Republic",
+			"Imperial Remnant",
+			"New Republic",
+			"Galactic Federation of Free Alliances[source?]",
+			"Darth Krayt's Galactic Empire"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/YT-2400_light_freighter",
+		"image": "https://static.wikia.nocookie.net/starwars/images/0/08/YT-2400-SWESV.png/revision/latest?cb=20190615212745",
+		"name": "YT-2400 light freighter",
+		"model": "YT-2400",
+		"length": "21 meters",
+		"maxSpeed": "800 kph",
+		"megalight": 0,
+		"width": "28.5 meters",
+		"height": 0,
+		"passengers": "6",
+		"capacity": "150 metric tons",
+		"cost": "130,000",
+		"affiliation": [
+			"Galactic Empire",
+			"Iron Squadron",
+			"Alliance to Restore the Republic",
+			"Tatooine rebel cell",
+			"Citizens' fleet"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/EF76_Nebulon-B_escort_frigate/Legends",
+		"image": "https://static.wikia.nocookie.net/starwars/images/f/f3/NBfrigate.jpg/revision/latest?cb=20061215024715",
+		"name": "EF76 Nebulon-B escort frigate",
+		"model": "EF76 Nebulon-B escort frigate",
+		"length": "300 meters",
+		"maxSpeed": "800 km/h",
+		"megalight": "40 MGLT",
+		"width": "72 meters",
+		"height": "166 meters",
+		"passengers": "75 troops",
+		"capacity": "6,000 metric tons",
+		"cost": "8,500,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Alliance to Restore the Republic",
+			"New Republic",
+			"Five Worlds",
+			"Confederation",
+			"Zann Consortium",
+			"Black Sun"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/TIE_Advanced_x1",
+		"image": "https://static.wikia.nocookie.net/starwars/images/1/1d/Vader_TIEAdvanced_SWB.png/revision/latest?cb=20160915042032",
+		"name": "TIE Advanced x1",
+		"model": "Twin Ion Engine Advanced x1",
+		"length": "11.05 meters",
+		"maxSpeed": "1,200 km/h",
+		"megalight": "105 MGLT",
+		"width": "9.5 meters",
+		"height": "6.28 meters",
+		"passengers": 0,
+		"capacity": 0,
+		"cost": "160,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Imperial Starfighter Corps",
+			"Sith Order",
+			"Darth Vader's secret forces",
+			"Alliance to Restore the Republic (stolen)",
+			"Tatooine rebel cell (stolen)"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/TIE/sa_bomber/Legends",
+		"image": "https://static.wikia.nocookie.net/starwars/images/9/9b/TIE_Bomber.jpg/revision/latest?cb=20081012232104",
+		"name": "TIE/sa bomber",
+		"model": "Twin Ion Engine/sa bomber",
+		"length": "7.8 meters",
+		"maxSpeed": "850 km/h",
+		"megalight": "80 MGLT",
+		"width": "8.6 meters",
+		"height": "5.0 meters",
+		"passengers": "Optional",
+		"capacity": "None in flight pod\n15 metric tons in bomb bay",
+		"cost": 0,
+		"affiliation": [
+			"Galactic Empire",
+			"Starfighter Corps",
+			"Thrawn's confederation",
+			"United Warlord Fleets",
+			"Imperial Remnant"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/TIE/D_Defender",
+		"image": "https://static.wikia.nocookie.net/starwars/images/c/c2/TIE_Defender.png/revision/latest?cb=20150801171146",
+		"name": "TIE/D Defender",
+		"model": "Twin Ion Engine Defender",
+		"length": "9.2 meters",
+		"maxSpeed": "1,680 km/h",
+		"megalight": "144 MGLT ",
+		"width": 0,
+		"height": 0,
+		"passengers": "None",
+		"capacity": "65 kilograms",
+		"cost": "300,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Zaarin splinter government",
+			"Nami",
+			"X1's faction",
+			"Imperial Remnant"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/TIE/sk_x1_experimental_air_superiority_fighter",
+		"image": "https://static.wikia.nocookie.net/starwars/images/4/4e/TIE_striker_in-atmosphere.jpg/revision/latest?cb=20161202064751",
+		"name": "TIE/sk x1 experimental air superiority fighter",
+		"model": "TIE/sk x1 experimental air superiority fighter",
+		"length": "17.18 meters",
+		"maxSpeed": "1,500 kph",
+		"megalight": 0,
+		"width": "11.3 meters",
+		"height": "2.95 meters",
+		"passengers": "Optional",
+		"capacity": 0,
+		"cost": "50,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Army Air Corps",
+			"Imperial Starfighter Corps"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/TIE/IN_interceptor/Legends",
+		"image": "https://static.wikia.nocookie.net/starwars/images/6/65/Tieinter2.jpg/revision/latest?cb=20060705184051",
+		"name": "TIE/IN Interceptor",
+		"model": "Twin Ion Engine Interceptor",
+		"length": "9.6 meters",
+		"maxSpeed": "1,250 km/h",
+		"megalight": "110 MGLT",
+		"width": 0,
+		"height": 0,
+		"passengers": "None",
+		"capacity": "75 kilograms",
+		"cost": "75,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"New Republic",
+			"Imperial Remnant",
+			"Galactic Federation of Free Alliances",
+			"Peace Brigade"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/Delta-class_JV-7_escort_shuttle",
+		"image": "https://static.wikia.nocookie.net/starwars/images/c/c2/JV7-XWA-3dRender.jpg/revision/latest?cb=20060118040107",
+		"name": "Delta-class JV-7 escort shuttle[1]",
+		"model": "Delta-class JV-7 escort shuttle",
+		"length": "30 meters",
+		"megalight": "72 MGLT",
+		"width": "32.3 meters",
+		"height": "32.4 meters",
+		"passengers": "10",
+		"capacity": 0,
+		"cost": 0,
+		"affiliation": [
+			"Galactic Empire",
+			"Duskhan League",
+			"Restored Empire"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/Delta-class_T-3c_shuttle",
+		"image": "https://static.wikia.nocookie.net/starwars/images/f/fd/Krennics-Shuttle-SWCT.png/revision/latest?cb=20170603031104",
+		"name": "Delta-class T-3c Shuttle",
+		"model": "Delta-class T-3c shuttle",
+		"length": "14.39 meters",
+		"maxSpeed": "1,000 kilometers per hour",
+		"megalight": 0,
+		"width": 0,
+		"height": "25.1 meters",
+		"passengers": "30",
+		"capacity": 0,
+		"cost": "160,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Imperial Navy"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/Zeta-class_Heavy_Cargo_Shuttle",
+		"image": "https://static.wikia.nocookie.net/starwars/images/8/82/Zeta-class_shuttle_ROUVG.png/revision/latest?cb=20170125070736",
+		"name": "Zeta-class Heavy Cargo Shuttle",
+		"model": "Zeta-class cargo shuttle",
+		"length": "35.50 meters",
+		"maxSpeed": "700 kph",
+		"megalight": 0,
+		"width": 0,
+		"height": "28.74 meters",
+		"passengers": "Variable (depending on cargo requirements)",
+		"capacity": 0,
+		"cost": "95,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Imperial Navy",
+			"Alliance to Restore the Republic (appropriated)"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/HAVw_A6_Juggernaut/Legends",
+		"image": "https://static.wikia.nocookie.net/starwars/images/7/7a/Jugprofile.jpg/revision/latest?cb=20050706191052",
+		"name": "HAVw A6 Juggernaut",
+		"model": 0,
+		"length": "49.4 meters",
+		"megalight": 0,
+		"width": "19.6 meters",
+		"height": "22 meters",
+		"passengers": "50-300 troops, depending on internal configuration",
+		"capacity": "30 tons",
+		"cost": "350,000 credits",
+		"affiliation": [
+			"Galactic Republic",
+			"Confederacy of Independent Systems",
+			"Galactic Empire",
+			"Imperial Army",
+			"Alliance to Restore the Republic",
+			"Restored Empire"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/TX-225_GAVw_%22Occupier%22_combat_assault_tank",
+		"image": "https://static.wikia.nocookie.net/starwars/images/c/ca/TX-225_Occupier.png/revision/latest?cb=20171214043301",
+		"name": "TX-225 GAVw \"Occupier\"\ncombat assault tank",
+		"model": "TX-225 GAVw \"Occupier\" combat assault tank",
+		"length": "7.30 meters",
+		"megalight": 0,
+		"width": 0,
+		"height": "1.82 meters",
+		"passengers": 0,
+		"capacity": "Kyber crystal containers (3)",
+		"cost": "45,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"Imperial Army",
+			"Alliance to Restore the Republic",
+			"Alliance Army"
+		]
+	},
+	{
+		"link": "https://starwars.fandom.com/wiki/Imperial_II-class_Star_Destroyer/Legends",
+		"image": "https://static.wikia.nocookie.net/starwars/images/4/4b/Stalker.png/revision/latest?cb=20210206024942",
+		"name": "Imperial II-class Star Destroyer",
+		"model": "Imperial II-class Star Destroyer",
+		"length": "1,600 meters",
+		"maxSpeed": "975 km/h",
+		"megalight": "60 MGLT",
+		"width": 0,
+		"height": 0,
+		"passengers": "9,700 troops",
+		"capacity": "36,000 metric tons",
+		"cost": "145,670,000 credits",
+		"affiliation": [
+			"Galactic Empire",
+			"New Republic",
+			"Disciples of Ragnos",
+			"Imperial Remnant",
+			"Galactic Federation of Free Alliances"
+		]
+	}
+]
