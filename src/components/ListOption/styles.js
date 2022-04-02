@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Colors } from '../../../styles';
 
 export const Opcoes = styled.div`
+	margin: 0 0 10px 0;
+	
 	h1 {
 		color: ${Colors.yellow};
 	}

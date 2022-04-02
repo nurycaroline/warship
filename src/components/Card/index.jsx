@@ -9,12 +9,11 @@ function Card({ showInfo, isPlayer, side, card }) {
 			<S.ContainerGroupImage>
 				{card.image &&
 					<Image src={card.image} alt={card.name}
-						width={100} height={100} />
-				}
-
-				{card.image &&
-					<Image src={card.image} alt={card.name}
-						width={65} height={65} />
+						width={200} height={200}
+						style={{
+							maxHeight: 200
+						}}
+					/>
 				}
 			</S.ContainerGroupImage>
 
@@ -29,18 +28,14 @@ function Card({ showInfo, isPlayer, side, card }) {
 		</>
 	)
 
-	return !isPlayer ? (
-		<S.ContainerComp>
-			{
-				showInfo ? (
-					<Image
-						src={side === 'sith' ? "/images/sith.png" : "/images/jedi.png"}
-						alt={side}
-						width={100} height={100} />
-				)
-					: renderInfo()
-			}
-		</S.ContainerComp>
+	return !isPlayer ? showInfo ? (
+		<S.ContainerComp>{renderInfo()}</S.ContainerComp>) : (
+		<S.ContainerCompWithouInfo>
+			<Image
+				src={side === 'sith' ? "/images/sith.png" : "/images/jedi.png"}
+				alt={side}
+				width={100} height={100} />
+		</S.ContainerCompWithouInfo >
 	) : (
 		<S.ContainerPlayer>
 			{renderInfo()}

@@ -9,7 +9,7 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 50px auto;
+	margin: 30px auto 10px auto;
 
 	h2 {
 		color: ${Colors.yellow};

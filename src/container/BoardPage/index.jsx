@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image'
+import Link from 'next/link'
 import Points from '../../components/Points';
 import Button from '../../components/Button';
 import ListOption from '../../components/ListOption';
@@ -42,9 +43,6 @@ function BoardPage({ side, cards }) {
 			? parseFloat(cardsComp[0][type].replace('meters', ''))
 			: 0
 
-		console.log(cardsPlayer[0])
-
-		console.log({ playerResult, compResult })
 
 		let cardsPlayerCopy = [...cardsPlayer]
 		let cardsCompCopy = [...cardsComp]
@@ -76,22 +74,27 @@ function BoardPage({ side, cards }) {
 
 	return (
 		<S.Container>
-			<ListOption>
-				<h1>Escolha uma característica:</h1>
-				<ul>
-					<li onClick={() => checkResult('cost')}>Preço</li>
-					<li onClick={() => checkResult('length')}>Largura</li>
-					<li onClick={() => checkResult('width')}>Velocidade</li>
-					<li onClick={() => checkResult('height')}>Comprimento</li>
-					<li onClick={() => checkResult('maxSpeed')}>Altura</li>
-				</ul>
-			</ListOption>
+			{!showResult ? (
+				<ListOption>
+					<h1>Escolha uma característica:</h1>
+					<ul>
+						<li onClick={() => checkResult('cost')}>Preço</li>
+						<li onClick={() => checkResult('length')}>Largura</li>
+						<li onClick={() => checkResult('width')}>Velocidade</li>
+						<li onClick={() => checkResult('height')}>Comprimento</li>
+						<li onClick={() => checkResult('maxSpeed')}>Altura</li>
+					</ul>
+				</ListOption>
+			) : (
+				<br />
+			)
+			}
+
 
 			<Card side={side} isPlayer showInfo card={cardsPlayer[0]} />
 
-			{showResult && (
-				<>
-					<S.BackgroundResult />
+			{
+				showResult && (
 					<S.Result>
 						<h1>{showResult}</h1>
 						{
@@ -104,9 +107,19 @@ function BoardPage({ side, cards }) {
 							)
 						}
 					</S.Result>
-				</>
-			)
+				)
 			}
+
+			<Card
+				showInfo={showResult}
+				side={side === 'jedi' ? 'sith' : 'jedi'}
+				card={cardsComp[0]}
+			/>
+
+
+			<Points
+				play={cardsPlayer.length}
+				comp={cardsComp.length} />
 
 			{showFinalWineer && (
 				<>
@@ -121,25 +134,18 @@ function BoardPage({ side, cards }) {
 
 						<h1>VENCEU A PARTIDA!</h1>
 
-						<Button
-							onClick={() => window.location.reload()}
-						>
-							PRÓXIMA PARTIDA
-						</Button>
+
+						<Link href="/" passHref>
+							<Button
+								// onClick={() => window.location.reload()}
+							>
+								PRÓXIMA PARTIDA
+							</Button>
+						</Link>
 					</S.ResultFinal>
 				</>
 			)
 			}
-
-			<Card
-				showInfo={!showResult}
-				side={side === 'jedi' ? 'sith' : 'jedi'}
-				card={cardsComp[0]}
-			/>
-
-			<Points
-				play={cardsPlayer.length}
-				comp={cardsComp.length} />
 		</S.Container >
 	)
 }
