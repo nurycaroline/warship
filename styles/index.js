@@ -8,7 +8,10 @@ const Colors = {
 	red: '#C90E10',
 
 	black: '#1C1C1C',
+	blackLight: 'rgba(51, 51, 51, 0.7)',
+
 	white: '#F1F1F1',
+
 	yellow: '#FFDF00',
 }
 

@@ -21,7 +21,7 @@ function HomePage() {
 							<h2>Sith</h2>
 						</Ordem>
 					</Link>
-					<Link  href={{ pathname: 'board', query: { side: 'jedi' } }} passHref>
+					<Link href={{ pathname: 'board', query: { side: 'jedi' } }} passHref>
 						<Ordem color="blue">
 							<Image src="/images/jedi.png"
 								alt="Jedi"
