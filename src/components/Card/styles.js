@@ -12,6 +12,10 @@ export const ContainerPlayer = styled.div`
 	height: 230px;
 `
 
+export const Player = styled.h3`
+	color: ${Colors.yellow};
+`
+
 export const ContainerComp = styled.div`
 	width: 100%;
 	display: flex;

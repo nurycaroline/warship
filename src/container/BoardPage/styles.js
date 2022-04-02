@@ -23,6 +23,18 @@ export const BackgroundResult = styled.div`
 	background: ${Colors.blackLight};
 `
 
+export const ResultPlayPlayer = styled.span`
+	color: ${({ theme }) => theme.play.primary};
+	font-weight: bold;
+	font-size: 24px;
+`
+
+export const ResultPlayComp = styled.span`
+	color: ${({ theme }) => theme.comp.primary};
+	font-weight: bold;
+	font-size: 24px;
+`
+
 export const Result = styled.div`
 	margin: auto;
 	display: flex;

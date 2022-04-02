@@ -28,18 +28,26 @@ function Card({ showInfo, isPlayer, side, card }) {
 		</>
 	)
 
-	return !isPlayer ? showInfo ? (
-		<S.ContainerComp>{renderInfo()}</S.ContainerComp>) : (
-		<S.ContainerCompWithouInfo>
-			<Image
-				src={side === 'sith' ? "/images/sith.png" : "/images/jedi.png"}
-				alt={side}
-				width={100} height={100} />
-		</S.ContainerCompWithouInfo >
+	return !isPlayer ? (
+		<>
+			<S.Player>Computador</S.Player>
+			{showInfo ? (
+				<S.ContainerComp>{renderInfo()}</S.ContainerComp>) : (
+				<S.ContainerCompWithouInfo>
+					<Image
+						src={side === 'sith' ? "/images/sith.png" : "/images/jedi.png"}
+						alt={side}
+						width={100} height={100} />
+				</S.ContainerCompWithouInfo >
+			)}
+		</>
 	) : (
-		<S.ContainerPlayer>
-			{renderInfo()}
-		</S.ContainerPlayer>
+		<>
+			<S.Player>Você</S.Player>
+			<S.ContainerPlayer>
+				{renderInfo()}
+			</S.ContainerPlayer>
+		</>
 	)
 }
 

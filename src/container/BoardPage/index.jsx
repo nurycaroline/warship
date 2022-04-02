@@ -31,10 +31,16 @@ function BoardPage({ side, cards }) {
 	const [showFinalWineer, setShowFinalWinner] = useState('')
 	const [deck1, deck2] = divideCards(cards)
 
+	const [resultPlay, setResultPlay] = useState({ player: 0, comp: 0 })
+
 	const [cardsPlayer, setCardsPlayer] = useState(deck1)
 	const [cardsComp, setCardsComp] = useState(deck2)
 
-	const checkResult = (type) => {
+	const [optionSelected, setOptionSelected] = useState('')
+
+	const checkResult = (type, optionName) => {
+		setOptionSelected(optionName)
+
 		const playerResult = cardsPlayer[0][type]
 			? parseFloat(cardsPlayer[0][type].replace('meters', ''))
 			: 0
@@ -43,6 +49,10 @@ function BoardPage({ side, cards }) {
 			? parseFloat(cardsComp[0][type].replace('meters', ''))
 			: 0
 
+		setResultPlay({
+			player: playerResult,
+			comp: compResult
+		})
 
 		let cardsPlayerCopy = [...cardsPlayer]
 		let cardsCompCopy = [...cardsComp]
@@ -60,16 +70,27 @@ function BoardPage({ side, cards }) {
 		}
 
 		if (playerResult > compResult) {
-			setCardsPlayer([...cardsPlayerCopy, cardsComp[0], cardsPlayer[0]])
-			setCardsComp(cardsCompCopy)
-
 			setShowResult('VOCÊ GANHOU!!')
 		} else {
-			setCardsPlayer(cardsPlayerCopy)
-			setCardsComp([...cardsCompCopy, cardsPlayer[0], cardsComp[0]])
-
 			setShowResult('VOCÊ PERDEU!!')
 		}
+	}
+
+	const nextPlay = () => {
+		let cardsPlayerCopy = [...cardsPlayer]
+		let cardsCompCopy = [...cardsComp]
+		cardsPlayerCopy.shift()
+		cardsCompCopy.shift()
+
+		if (showResult === 'VOCÊ GANHOU!!') {
+			setCardsPlayer([...cardsPlayerCopy, cardsComp[0], cardsPlayer[0]])
+			setCardsComp(cardsCompCopy)
+		} else if (showResult === 'VOCÊ PERDEU!!') {
+			setCardsPlayer(cardsPlayerCopy)
+			setCardsComp([...cardsCompCopy, cardsPlayer[0], cardsComp[0]])
+		}
+
+		setShowResult(null)
 	}
 
 	return (
@@ -78,11 +99,11 @@ function BoardPage({ side, cards }) {
 				<ListOption>
 					<h1>Escolha uma característica:</h1>
 					<ul>
-						<li onClick={() => checkResult('cost')}>Preço</li>
-						<li onClick={() => checkResult('length')}>Largura</li>
-						<li onClick={() => checkResult('width')}>Velocidade</li>
-						<li onClick={() => checkResult('height')}>Comprimento</li>
-						<li onClick={() => checkResult('maxSpeed')}>Altura</li>
+						<li onClick={() => checkResult('cost', 'Preço')}>Preço</li>
+						<li onClick={() => checkResult('length', 'Largura')}>Largura</li>
+						<li onClick={() => checkResult('width', 'Velocidade')}>Velocidade</li>
+						<li onClick={() => checkResult('height', 'Comprimento')}>Comprimento</li>
+						<li onClick={() => checkResult('maxSpeed', 'Altura')}>Altura</li>
 					</ul>
 				</ListOption>
 			) : (
@@ -97,10 +118,14 @@ function BoardPage({ side, cards }) {
 				showResult && (
 					<S.Result>
 						<h1>{showResult}</h1>
+						<h1>
+							{optionSelected}:
+							<S.ResultPlayPlayer> {resultPlay.player}</S.ResultPlayPlayer> x <S.ResultPlayComp>{resultPlay.comp}</S.ResultPlayComp>
+						</h1>
 						{
 							(!!cardsComp.length || !!cardsPlayer.length) && (
 								<Button
-									onClick={() => setShowResult(null)}
+									onClick={() => nextPlay()}
 								>
 									PRÓXIMA RODADA
 								</Button>
@@ -111,7 +136,7 @@ function BoardPage({ side, cards }) {
 			}
 
 			<Card
-				showInfo={showResult}
+				showInfo={showResult || showFinalWineer}
 				side={side === 'jedi' ? 'sith' : 'jedi'}
 				card={cardsComp[0]}
 			/>
@@ -136,9 +161,7 @@ function BoardPage({ side, cards }) {
 
 
 						<Link href="/" passHref>
-							<Button
-								// onClick={() => window.location.reload()}
-							>
+							<Button>
 								PRÓXIMA PARTIDA
 							</Button>
 						</Link>
